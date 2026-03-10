@@ -29,13 +29,13 @@ pipeline {
                 }
             }
         }
-        stage('Test'){
-            steps {
-                sh 'mvn -s settings.xml test'
+            stage('Test'){
+              steps {
+                sh 'mvn -s test'
             }
-        stage('Checkstlye Analysis') {
-            steps {
-                sh 'mvn -s settings.xml checkstyle:checkstyle'
+            stage('Checkstlye Analysis') {
+              steps {
+                sh 'mvn -s checkstyle:checkstyle'
             }
         }   
         }
